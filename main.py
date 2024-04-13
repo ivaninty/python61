@@ -1,23 +1,28 @@
 class Student:
-    def __init__(self, name="none"):
+    def __init__(self, name="none", mark=10):
         self.name = name
-
-    def __str__(self):
-        return f"Hello, my name is {self.name}"
-
-    def __del__(self):
-        print("i am graduated))))")
+        self.mark = mark
 
 
-stud1 = Student("Maria")
-stud = Student("Andriy")
+
+    def doHomework(self):
+        self.mark += 2
+
+
+    def playgames(self):
+        self.mark -= 3
+
+stud = Student(name="max")
 print(stud)
-print(stud1)
+
+print(stud.mark)
+stud.doHomework()
+print(stud.mark)
 
 
 
-
-
+stud.playgames()
+print(stud.mark)
 
 
 
